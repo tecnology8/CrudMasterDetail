@@ -1,0 +1,97 @@
+﻿@model CrudMasterDetail.Models.Invoice
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+<h1>Details</h1>
+
+<div>
+    <h4>Invoice</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TotalItbis)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TotalItbis)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SubTotal)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SubTotal)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Total)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Total)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Customers)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Customers.Id)
+        </dd>
+    </dl>
+
+
+    @*<p>
+        <a class="btn btn-primary" asp-controller="InvoiceDetails" asp-action="Create" asp-route-id="@Model.InvoiceDetails[0].Id">New Invoice Details</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.InvoiceDetails[0].Qty)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.InvoiceDetails[0].Price)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.InvoiceDetails[0].SubTotal)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.InvoiceDetails[0].Total)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.InvoiceDetails[0].Customers)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.InvoiceDetails)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Qty)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Price)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SubTotal)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Total)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Customers.Id)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>*@
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
